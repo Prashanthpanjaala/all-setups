@@ -11,8 +11,8 @@ chmod +x kops-linux-amd64 kubectl
 mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
 
-aws s3api create-bucket --bucket prashanthdevops17.k8s.local --region us-east-1
-aws s3api put-bucket-versioning --bucket prashanthdevops17.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://prashanthdevops17.k8s.local
-kops create cluster --name prashanth.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
-kops update cluster --name prashanth.k8s.local --yes --admin
+aws s3api create-bucket --bucket prashanth17.k8s.local --region us-east-1
+aws s3api put-bucket-versioning --bucket prashanth17.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://prashanth17.k8s.local
+kops create cluster --name prashanthdevops.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
+kops update cluster --name prashanthdevops.k8s.local --yes --admin
